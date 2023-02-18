@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  color-scheme: dark light;
+}
+body {
+  background: url(forest.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  height: 100dvh;
+
+  position: relative;
+  isolation: isolate;
+}
+
+body.active::after {
+  content: "";
+  background: black;
+  position: absolute;
+  inset: 0;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+button {
+  padding: 1rem 2rem;
+  background: transparent;
+  font-size: 2rem;
+  font-weight: 700;
+  border: 2px solid #fff;
+  box-shadow: 0 0 5px black;
+
+  position: absolute;
+  bottom: 5rem;
+  left: 5rem;
+
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.3s ease-in;
+}
+
+button:hover {
+  background: #ede7e7;
+  color: black;
+}
+
+.msg-container {
+  display: none;
+  background: #fff;
+  padding-block: 1.3rem;
+  padding-inline: 0.4rem;
+  border-radius: 0.3rem 0.3rem 0rem 0rem;
+  max-width: 50%;
+
+  color: black;
+  text-align: justify;
+  letter-spacing: 0.3px;
+  line-height: 1.5;
+
+  animation-name: msganimation;
+  animation-duration: 0.5s;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes msganimation {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: l;
+  }
+}
+.close {
+  position: absolute;
+  bottom: -10vh;
+  left: 22vw;
+
+  background: #fff;
+  width: 45px;
+  height: 45px;
+  padding: 1.5rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 800;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.close:hover {
+  transform: scale(1.1);
+  color: deeppink;
+}

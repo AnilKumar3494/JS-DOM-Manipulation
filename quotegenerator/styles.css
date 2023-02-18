@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  color-scheme: dark light;
+  background-image: url(library.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+h2 {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  letter-spacing: 4px;
+  line-height: 1.4;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: palevioletred;
+}
+h3 {
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: lightgray;
+}
+button {
+  padding: 0.8rem 1rem;
+  color: lightgray;
+  background: black;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+button.active {
+  background: lightblue;
+}
+p {
+  line-height: 1.5;
+  letter-spacing: 0.7px;
+  font-size: 1.3rem;
+  font-weight: 550;
+  color: black;
+}
+
+.container {
+  max-width: 550px;
+  margin: auto;
+  padding: 1.2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.header {
+  background: black;
+  border: 2px solid #fffdff;
+  border-radius: 6px;
+
+  padding-block: 0.5rem;
+  padding-inline: 0.8rem;
+}
+.quote-box {
+  background: #fffdff;
+  border-radius: 16px;
+  box-shadow: 0 0 10px black;
+  padding: 1.8rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
