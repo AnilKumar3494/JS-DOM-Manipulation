@@ -15,14 +15,23 @@ body {
   height: 100vh;
   height: 100dvh;
 
-  background: linear-gradient(30deg, rgb(155, 22, 155), rgb(131, 85, 181));
+  background: url(background.jpg);
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
 
   color: black;
   font-family: "Open Sans", sans-serif;
+  position: relative;
+  isolation: isolate;
 }
+body::after {
+  content: "";
+  background: black;
+  position: absolute;
 
+  z-index: -2;
+}
 .container {
   background: honeydew;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
