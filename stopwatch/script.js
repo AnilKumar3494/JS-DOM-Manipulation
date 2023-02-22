@@ -50,7 +50,7 @@ let timerInterval = null;
 
 //start and pause
 playPauseBtnEl.addEventListener("click", function () {
-  //Adding Pause Button
+  //Adding Pause Button and starting timer
   if (timerStatus === "stopped") {
     timerInterval = window.setInterval(stopWatch, 1000);
 

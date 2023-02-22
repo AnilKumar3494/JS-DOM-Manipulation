@@ -49,6 +49,7 @@ function checkInputs() {
           setError(passwordcheckEl, "Password Did not Match");
         } else {
           setSuccess(passwordcheckEl);
+          submitSuccess();
         }
         //for passwordCheck END
       } //for password END
@@ -84,4 +85,14 @@ function emailVerification(emailValue) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
     emailValue
   );
+}
+
+//submit success
+function submitSuccess() {
+  const bodyEl = document.querySelector("body");
+  const newdivEL = document.createElement("div");
+  bodyEl.appendChild(newdivEL);
+  newdivEL.setAttribute("class", "submitsuccess");
+  newdivEL.innerHTML = "Successfully Submitted";
+  console.log(newdivEL);
 }

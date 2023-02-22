@@ -22,20 +22,27 @@ body {
 
   color: black;
   font-family: "Open Sans", sans-serif;
+
   position: relative;
   isolation: isolate;
 }
 body::after {
   content: "";
   background: black;
-  position: absolute;
 
+  position: absolute;
+  inset: 0;
   z-index: -2;
+
+  opacity: 0.4;
 }
 .container {
   background: honeydew;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
   border-radius: 1rem;
+}
+.container:hover {
+  box-shadow: 0 0px 5px black;
 }
 .header {
   background: lightblue;
@@ -50,7 +57,7 @@ body::after {
 }
 .form {
   display: grid;
-  gap: 0.5rem;
+
   padding: 2rem 1rem 1rem 1rem;
   grid-template-columns: minmax(clamp(30vw, 550px, 90vw), 1fr);
   align-items: center;
@@ -76,9 +83,13 @@ input {
   border-radius: 4px;
   background: transparent;
 
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: black;
   font-weight: 500;
+}
+input:focus,
+input:hover {
+  border: 2px solid steelblue;
 }
 input::placeholder {
   font-size: 0.9rem;
@@ -128,7 +139,7 @@ button {
   background: rgb(195, 82, 195);
 
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   letter-spacing: 1px;
 
   border-radius: 4px;
@@ -136,4 +147,46 @@ button {
   outline: none;
 
   cursor: pointer;
+  transition: all 0.3s linear;
+}
+button:hover {
+  transform: scale(1.1);
+  font-size: 1.2rem;
+}
+
+.submitsuccess {
+  background: lime;
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  padding-block: 1.3rem;
+  padding-inline: 1rem;
+
+  border-radius: 8px;
+
+  position: absolute;
+  bottom: 0;
+
+  animation: success;
+  animation-duration: 3s;
+  animation-delay: 1s;
+
+  transition: all 0.3s ease-in;
+}
+
+@keyframes success {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    right: 40%;
+  }
+  90% {
+    visibility: hidden;
+  }
+  100% {
+    right: 0;
+  }
 }
